@@ -1,0 +1,427 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    overflow: hidden; /* Disable scrolling */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('Images/starter_eng/pics/tiles/straight_rail.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    align-items: stretch; /* Ensure content stretches the full height */
+    justify-content: center;
+    gap: 20px; /* Space between the side images and the container */
+    height: 100vh; /* Full height for main content */
+    width: 90%;
+}
+
+.side-images {
+    display: flex;
+    flex-direction: row; /* Arrange image columns side by side */
+    gap: 10px; /* Space between the two columns of images */
+    height: 100%; /* Ensure full height for side images */
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    justify-content: space-between; /* Evenly distribute images from top to bottom */
+    height: 100%; /* Full height for the column */
+}
+
+.side-image {
+    width: 150px; /* Set width for each side image */
+    height: auto; /* Keep aspect ratio */
+    flex-grow: 1; /* Allow images to grow and fill available vertical space */
+}
+
+.container {
+    background-color: rgba(250, 249, 246, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+}
+
+.title {
+    font-size: 2srem;
+    font-weight: bold;
+    color: #c3a56e;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#player-form .input-group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#player-name {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #c3a56e;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.difficulty-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 2px solid #d6d8a7;
+    border-radius: 8px;
+}
+
+.difficulty-btn {
+    background-color: #f5f5dc; /* Default color */
+    border: 2px solid #d6d8a7;
+    padding: 30px 50px;
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Added transition for smooth effect */
+    font-weight: bold;
+    color: #6f6f6f; /* Default text color */
+}
+
+.difficulty-btn:hover {
+    background-color: #d6d8a7;
+    color: white;
+}
+
+.difficulty-label {
+    font-size: 1rem;
+    color: #6f6f6f;
+    margin-top: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rules-btn, .start-btn , .leaderboard-button{
+    background-color: #e9ebdb;
+    border: 2px solid #a4a86d;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Added transition for smooth effect */
+}
+
+.rules-btn:hover, .start-btn:hover , .leaderboard-button{
+    background-color: #a4a86d;
+    color: white;
+}
+
+.rules-section {
+    background-color: rgba(250, 249, 246, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    z-index: 1000;
+}
+
+#close-rules-btn {
+    background-color: #e9ebdb;
+    border: 2px solid #a4a86d;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#close-rules-btn:hover {
+    background-color: #a4a86d;
+    color: white;
+}
+
+.container, .rules-section {
+    transition: opacity 0.5s ease;
+}
+
+.rules-section {
+    opacity: 0;
+}
+
+.rules-section[style*="display: block"] {
+    opacity: 1;
+}
+
+/* Second page CSS */
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Game container layout */
+.game-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Ensure space is distributed */
+    align-items: stretch; /* Ensure full-height containers */
+    width: 80%; /* Full width */
+    height: 100vh; /* Use viewport height to fill the page */
+    margin: 0 auto; /* Center the game container */
+    border: 2px solid transparent; /* Border for visibility, change as needed */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shaded border effect */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: background color to enhance visibility */
+}
+
+/* Left, Center, and Right containers */
+.left-container, .center-container, .right-container {
+    display: flex; /* Use flex for consistent layout */
+    flex-direction: column; /* Column layout for left container */
+    align-items: center;
+    justify-content: flex-start; /* Start at the top */
+    margin: 0; /* Remove margin */
+}
+
+/* Left container */
+.left-container {
+    flex: 0 0 23%; /* Allow the left container to grow */
+    background-color: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+     /* Adjust width of the left container if needed */
+    display: flex; /* Use flexbox to center items */
+    flex-direction: column; /* Stack images vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    
+}
+
+/* Center container */
+.center-container {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    margin: 0; /* Ensure no extra space around container */
+    padding: 0; /* Remove any padding */
+}
+
+.table {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+/* Right container */
+.right-container {
+    flex: 0 0 23%;/* Allow the right container to grow */
+    background-color: #f2f2f2;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Image styling */
+.option-image {
+    width: 35%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between images */
+    transition: trasnform 0.3s ease, filter 0.3s ease;
+}
+.option-image:hover {
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}
+/* Right-side boxes */
+.box {
+    width: 80%; /* Adjust box width */
+    margin: 10px 0; /* Space around the box */
+    padding: 15px; /* Add some padding */
+    background-color: #eaeaea; /* Background color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
+}
+
+.player-info p {
+    margin: 5px 0; /* Margin between paragraphs */
+    font-size: 1.2rem; /* Font size */
+    color: #333; /* Text color */
+}
+
+h5 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #c3a56e;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+#game-table {
+    width: 100%;        /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders */
+    /* margin: 0; No margin */
+    padding: 0; /* No padding */
+    border-spacing: 0;
+    
+}
+
+#game-table td {
+
+    padding: 0px;
+}
+
+#game-table img {
+    width: 100%;     /* Fill the width of the td */
+    height: 100%;    /* Allow height to adjust to width */
+    /* Prevent images from exceeding td height */
+    display: block;   
+    /* object-fit: contain; Maintain aspect ratio */
+    margin: 0;        /* Remove margin */
+}
+
+
+
+.left-side-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    height: 200%; /* Full height for side images */
+}
+
+.right-side-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    height: 100%; /* Full height for side images */
+}
+
+.left-side-image {
+    width: 150px; /* Set width for each left side image */
+    height: auto; /* Keep aspect ratio */
+    flex-grow: 1; /* Allow images to grow and fill available vertical space */
+}
+
+.right-side-image {
+    width: 150px; /* Set width for each right side image */
+    height: auto; /* Keep aspect ratio */
+    flex-grow: 1; /* Allow images to grow and fill available vertical space */
+}
+
+
+.right-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c3a56e;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+.congratulations {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    z-index: 1000;
+    opacity: 1;
+    animation: fade-in 0.5s ease-out, bounce 1s infinite;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -45%); }
+}
+
+.congratulations.hide {
+    animation: fade-out 0.5s ease-out;
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+
+
+
+
+#leaderboard-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    display: none; /* Hide initially */
+}
+
+
+.leaderboard-display {
+    display: none;
+}
+
+.leaderboard-display.visible {
+    display: block;
+}
+
+
+.reset-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.reset-button:hover {
+    background-color: #ff2c2c;
+}

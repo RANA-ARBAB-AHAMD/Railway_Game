@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railways Game Form</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="main-content">
+        <!-- Left Side Images -->
+        <div class="side-images">
+            <div class="image-column">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 1" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 2" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 3" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 4" class="side-image">
+            </div>
+            <div class="image-column">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 5" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 6" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 7" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Image 8" class="side-image">
+            </div>
+        </div>
+
+
+
+
+        <div class="main-content">
+            <!-- Main Content -->
+            <div class="container">
+                <h1 class="title">RAILWAYS</h1>
+                <form id="player-form">
+                    <div class="input-group">
+                        <label for="player-name">Who are you?</label>
+                        <input type="text" id="player-name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="difficulty">
+                        <p>Set the difficulty!</p>
+                        <div class="difficulty-options">
+                            <div class="difficulty-btn-container">
+                                <button type="button" class="difficulty-btn" id="easy">5 X 5</button>
+                                <p class="difficulty-label">Easy</p>
+                            </div>
+                            <div class="difficulty-btn-container">
+                                <button type="button" class="difficulty-btn" id="hard">7 X 7</button>
+                                <p class="difficulty-label">Hard</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="button" class="rules-btn" id="rules">Rules</button>
+                        <button type="submit" class="start-btn" id="start">Start Game</button>
+                        <button id="leaderboard-button" class="leaderboard-button">Leaderboard</button>
+
+
+
+
+                    </div>
+                </form>
+
+
+                <div id="leaderboard-popup" class="leaderboard-popup" hidden>
+                    <div class="popup-content">
+                        <span id="close-popup" class="close">&times;</span>
+                        <h2>Select Difficulty</h2>
+                        <button id="easy-leaderboard" class="difficulty-choice">5x5 Difficulty</button>
+                        <button id="hard-leaderboard" class="difficulty-choice">7x7 Difficulty</button>
+                        <button id="reset-leaderboard" class="reset-button">Reset Leaderboard</button>
+
+                        <!-- 5x5 Leaderboard Display -->
+                        <div id="leaderboard-5x5" class="leaderboard-display hidden">
+                            <h3>5x5 Leaderboard</h3>
+                            <ul id="leaderboard-list-5x5"></ul>
+                        </div>
+
+                        <!-- 7x7 Leaderboard Display -->
+                        <div id="leaderboard-7x7" class="leaderboard-display hidden">
+                            <h3>7x7 Leaderboard</h3>
+                            <ul id="leaderboard-list-7x7"></ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Hidden Rules Section -->
+            <div class="rules-section" style="display: none;">
+                <h2>Game Rules</h2>
+                <p>1. The game ends when the player correctly completes the puzzle according to the given rules.</p>
+                <p>2. During the validation of the puzzle's completion, the following elements need to be checked:</p>
+                <p>3. Each cell has two exit points, and the train can enter each neighboring cell from the correct
+                    direction.</p>
+                <p>4. Every cell that needs to be touched is touched.</p>
+                <p>5. Every cell where no track can be placed remains empty.</p>
+                <button type="button" class="close-btn">Close Rules</button>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Right Side Images -->
+        <div class="side-images">
+            <div class="image-column">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 1" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 2" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 3" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 4" class="side-image">
+            </div>
+            <div class="image-column">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 5" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 6" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 7" class="side-image">
+                <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Right Image 8" class="side-image">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Game Part -->
+
+    <div class="image-container left-image-container" id="gameleftimage" style="display: none;">
+        <div class="left-side-images">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 1" class="left-side-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 2" class="left-side-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 1" class="left-side-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 2" class="left-side-image">
+        </div>
+
+    </div>
+
+    <div class="game-container" id="game-container" style="display: none;">
+        <div class="left-container" id="leftContainer">
+            <button type="button" class="back-menu-btn" id="back-menu">Back to Menu</button>
+
+            <p><strong>Select any of</strong></p>
+            <p><strong>The Image</strong></p>
+            <p><strong>You want to place</strong><br></br></p>
+            <img src="Images/starter_eng/pics/tiles/curve_rail.png" alt="Option 1" class="option-image">
+            <img src="Images/starter_eng/pics/tiles/bridge_rail.png" alt="Option 2" class="option-image">
+            <img src="Images/starter_eng/pics/tiles/mountain_rail.png" alt="Option 3" class="option-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Option 4" class="option-image">
+        </div>
+        <div class="center-container" id="game-table">
+            <!--   here will come the table of the printed map -->
+        </div>
+        <div class="right-container">
+            <h2>RAILWAYS<br></br></h2>
+            <div class="box player-info">
+                <p><strong>Welcome to this Railway Game</strong><br></p>
+                <p>I hope you will have a great time<br></p>
+                <p><strong>Player Name:</strong><span id="display-player-name"></span></p>
+                <p><strong>Time Elapsed:</strong> <span id="elapsed-time">00.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container right-image-container" id="gamerightimage" style="display: none;">
+        <div class="right-side-images">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 1" class="left-side-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 2" class="left-side-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 1" class="left-side-image">
+            <img src="Images/starter_eng/pics/tiles/straight_rail.png" alt="Left Option 2" class="left-side-image">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
